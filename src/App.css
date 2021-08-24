@@ -7,6 +7,8 @@
   pointer-events: none;
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,6 +17,7 @@
 
 div {
   background-color: #070706;
+ 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,10 +25,6 @@ div {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #23ab11;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -36,13 +35,12 @@ div {
     transform: rotate(360deg);
   }
 }
-
 a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
   color: rgba(247, 209, 18, 0.921);
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -54,7 +52,7 @@ a {
 a:hover {
   background: rgba(247, 209, 18, 0.921);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 50%;
   box-shadow: 0 0 5px rgba(247, 209, 18, 0.921),
               0 0 25px rgba(247, 209, 18, 0.921),
               0 0 50px rgba(247, 209, 18, 0.921),
@@ -66,6 +64,8 @@ a span {
   display: block;
 }
 
+
+
 @keyframes btn-anim1 {
   0% {
     left: -100%;
@@ -75,6 +75,8 @@ a span {
   }
 }
 
+
+
 @keyframes btn-anim3 {
   0% {
     right: -100%;
@@ -83,6 +85,7 @@ a span {
     right: 100%;
   }
 }
+
 
 @keyframes btn-anim4 {
   0% {
