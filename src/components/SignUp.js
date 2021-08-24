@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Login = () => {
+const SignUp = () => {
 
     const onSubmit = (
-        axios.post('http://localhost:5000/login')
+        axios.post('http://localhost:5000/signup')
     )
     return (
         <div>
@@ -12,4 +12,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default SignUp
