@@ -13,19 +13,31 @@ function onChangeHandler(e) {
   console.log(e);
 }
 
+function onSubmit(e) {
+  e.preventDefault()
+  console.log('test');
+}
+console.log(loginForm);
 return (
   <form>
-    <input placeHolder='Username' name='username' value={loginForm.username} onChange={onChangeHandler}/>
-    
-    <input placeHolder='Password' name='password' value={loginForm.password} onChange={onChangeHandler}/>
-    {/* <br></br>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit */}
-    {/* </a> */}
+    <input 
+      placeholder='Username' 
+      name='username' 
+      value={loginForm.username} 
+      type='text'
+      onChange={onChangeHandler}/>
+      
+    <input 
+      placeholder='Password' 
+      name='password' 
+      value={loginForm.password}
+      type='password'
+      onChange={onChangeHandler}/>
+    <br></br>
+    <a onClick={onSubmit} 
+      href="#">
+      Submit
+    </a>
   </form>
 )
 }
