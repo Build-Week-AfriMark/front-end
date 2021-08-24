@@ -33,11 +33,11 @@ function SignUp(props) {
             />
         
         
-    <a href="#">Submit</a>
-        
+    <a onClick={onSubmit} href="#">Submit</a>
         </form>
 
     )
 }
 
 export default SignUp;
+
