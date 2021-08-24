@@ -1,15 +1,45 @@
-import React from 'react'
+import React,  { useState } from 'react';
 
-const Login = () => {
+function Login() {
+  const [loginForm, setLoginForm] = useState({
+    username: '',
+    password: '',
+})
 
-    const onSubmit = (
-        axios.post('http://localhost:5000/login')
-    )
-    return (
-        <div>
-            
-        </div>
-    )
+function onChangeHandler(e) {
+  e.target.name === 'username' ? 
+  setLoginForm({...loginForm, username: e.target.value}) : 
+  setLoginForm({...loginForm, password: e.target.value})
+  console.log(e);
 }
 
-export default Login
+function onSubmit(e) {
+  e.preventDefault()
+  console.log('test');
+}
+console.log(loginForm);
+return (
+  <form>
+    <input 
+      placeholder='Username' 
+      name='username' 
+      value={loginForm.username} 
+      type='text'
+      onChange={onChangeHandler}/>
+      
+    <input 
+      placeholder='Password' 
+      name='password' 
+      value={loginForm.password}
+      type='password'
+      onChange={onChangeHandler}/>
+    <br></br>
+    <a onClick={onSubmit} 
+      href="#">
+      Submit
+    </a>
+  </form>
+)
+}
+
+export default Login;
