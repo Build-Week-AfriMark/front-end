@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import React,  { useState } from 'react';
+import React from 'react';
 import Login from '../src/components/Login';
 
 function App() {
@@ -14,13 +14,6 @@ src="https://images.unsplash.com/photo-1531123414780-f74242c2b052?ixlib=rb-1.2.1
       </footer>
       <Login
       />
-        <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit
-    </a>
     </div>
   )
 }
