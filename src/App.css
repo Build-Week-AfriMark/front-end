@@ -24,7 +24,7 @@ div {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(249, 229, 16);
+  color: #23ab11;
 }
 
 
@@ -46,7 +46,7 @@ a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #23ab11;
+  color: rgba(247, 209, 18, 0.921);
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -57,13 +57,13 @@ a {
 }
 
 a:hover {
-  background: #23ab11;
+  background: rgba(247, 209, 18, 0.921);
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #23ab11,
-              0 0 25px #23ab11,
-              0 0 50px #23ab11,
-              0 0 100px #23ab11;
+  box-shadow: 0 0 5px rgba(247, 209, 18, 0.921),
+              0 0 25px rgba(247, 209, 18, 0.921),
+              0 0 50px rgba(247, 209, 18, 0.921),
+              0 0 100px rgba(247, 209, 18, 0.921)
 }
 
 a span {
