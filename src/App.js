@@ -1,5 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+import Login from '../src/components/Login';
+import SignUp from './components/SignUp';
 
 import Login from './components/Login';
 import Home from './components/Home';
@@ -7,11 +11,20 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-      <Home />
+    <div>
+      <img 
+src="https://images.unsplash.com/photo-1531123414780-f74242c2b052?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGxhZ29zJTJDJTIwbmlnZXJpYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60" alt="An image"></img>
+      <footer>
+      <h2>Login</h2>
+      <Login/>
+      <h2>Create a New Account <br></br>Sign up!</h2>
+      <SignUp/>
+      </footer>
+      
+      
+
     </div>
-  );
+  )
 }
 
 export default App;
