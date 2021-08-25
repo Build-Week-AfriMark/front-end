@@ -6,6 +6,8 @@ function SignUp(props) {
         username: '',
         password: ''
     })
+    console.log(props)
+
 
     function onChangeHandler(e) {
         e.target.name === 'username' ? setSignUForm({...signUpForm, username: e.target.value}) : setSignUForm({...signUpForm, password: e.target.value})
@@ -16,26 +18,27 @@ function SignUp(props) {
     }
 
     return (
+      <div>
+        <h2>Create a New Account <br></br>Sign up!</h2>
         <form>
-            <input 
-              placeholder='Username' 
-              name='username'
-              value={signUpForm.username} 
-              onChange={onChangeHandler}
-              type='text'  
-            />
+          <input 
+            placeholder='Username' 
+            name='username'
+            value={signUpForm.username} 
+            onChange={onChangeHandler}
+            type='text'  
+          />
 
-            <input 
-              placeholder='Password' 
-              name='password' 
-              value={signUpForm.password} 
-              onChange={onChangeHandler} 
-              type='password'
-            />
-        
-        
-    <a onClick={onSubmit} href="#">Submit</a>
+          <input 
+            placeholder='Password' 
+            name='password' 
+            value={signUpForm.password} 
+            onChange={onChangeHandler} 
+            type='password'
+          />
+          <a onClick={onSubmit} href="#">Submit</a>
         </form>
+      </div>
 
     )
 }
