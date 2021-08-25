@@ -9,6 +9,7 @@ const Item = (props) => {
             <p>{item.location}</p>
             <p>{item.name}</p>
             <p>{item.price}</p>
+            <p>{item.description}</p>
         </div>
     )
 }
