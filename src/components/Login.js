@@ -1,5 +1,6 @@
 import React,  { useState } from 'react';
 import { useHistory } from 'react-router-dom'
+import axios from 'axios'
 
 import { loginImage } from '../images'
 
@@ -8,7 +9,6 @@ function Login() {
     username: '',
     password: '',
 })
-console.log(useHistory)
 const { push } = useHistory()
 
 function onChangeHandler(e) {
@@ -19,9 +19,15 @@ function onChangeHandler(e) {
 
 function onSubmit(e) {
   e.preventDefault()
-  push('/theMarket')
+  axios.post('https://build-week-afrimark.herokuapp.com/api/login', loginForm)
+    .then(res => {
+      console.log(res)
+      localStorage.setItem('token', res.data.payload)
+      push('/the-market')
+    })
+    .catch(err => console.log(err))
 }
-console.log(loginForm);
+
 return (
   <div>
     <img 
