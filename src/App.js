@@ -14,16 +14,10 @@ function App() {
     <div>
       <header>
         <nav>
-          {localStorage.getItem('token') ?
-            <>
-              <a href='/the-market'>The Market</a>
-              <a href='/logout'>Logout</a>
-            </> : 
-            <>
-              <a href='/signup'>Sign Up</a>
-              <a href='/login'>Login</a>
-            </>
-          } 
+          <a href='/the-market'>The Market</a>
+          <a href='/logout'>Logout</a>
+          <a href='/signup'>Sign Up</a>
+          <a href='/login'>Login</a>
         </nav>
       </header>
       <Router>
@@ -32,23 +26,14 @@ function App() {
           <SignUp/>
         </Route>
         <PrivateRoute path='/the-market' component={TheMarket} />
-  
-        {localStorage.getItem('token') ? 
-        <>
-        <PrivateRoute path='/' component={TheMarket} />
         <PrivateRoute path='/logout' component={Logout} />
-        </> :
-          <>
-          <Route path='/login'>
-            <Login />
-          </Route>
-          <Route path='/'>
-            <Login />
-          </Route> 
-          </>
-        }
-        
-      </Switch>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/'>
+          <Login />
+        </Route> 
+        </Switch>        
       </Router>
     </div>
   )

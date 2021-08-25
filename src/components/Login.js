@@ -1,4 +1,4 @@
-import React,  { useState } from 'react';
+import React,  { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
@@ -9,7 +9,15 @@ function Login() {
     username: '',
     password: '',
 })
+
 const { push } = useHistory()
+
+useEffect(() => {
+  const token = localStorage.getItem('token')
+  if (token) {
+    push('/the-market')
+  }
+},[])
 
 function onChangeHandler(e) {
   e.target.name === 'username' ? 
@@ -19,10 +27,10 @@ function onChangeHandler(e) {
 
 function onSubmit(e) {
   e.preventDefault()
-  axios.post('https://build-week-afrimark.herokuapp.com/api/login', loginForm)
+  axios.post('https://build-week-afrimark.herokuapp.com/api/auth/login', loginForm)
     .then(res => {
       console.log(res)
-      localStorage.setItem('token', res.data.payload)
+      localStorage.setItem('token', res.data.token)
       push('/the-market')
     })
     .catch(err => console.log(err))

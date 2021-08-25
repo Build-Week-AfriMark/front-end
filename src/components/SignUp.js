@@ -1,13 +1,18 @@
 
 import React, { useState } from 'react';
+import axios from 'axios'
+import { throwStatement } from '@babel/types';
+
+import { useHistory } from 'react-router-dom'
 
 function SignUp(props) {
     const [signUpForm, setSignUForm] = useState({
         username: '',
         password: ''
     })
-    console.log(props)
 
+
+    const { push } = useHistory()
 
     function onChangeHandler(e) {
         e.target.name === 'username' ? setSignUForm({...signUpForm, username: e.target.value}) : setSignUForm({...signUpForm, password: e.target.value})
@@ -15,6 +20,9 @@ function SignUp(props) {
     }
     function onSubmit(e) {
       e.preventDefault()
+      axios.post('https://build-week-afrimark.herokuapp.com/api/auth/register', signUpForm)
+        .then(res => console.log(res), push('/login'))
+        .catch(err => console.log(err))
     }
 
     return (
