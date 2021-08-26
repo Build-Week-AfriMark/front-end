@@ -9,8 +9,6 @@ function SignUp(props) {
         username: '',
         password: ''
     })
-
-
     const { push } = useHistory()
 
     function onChangeHandler(e) {
@@ -23,11 +21,12 @@ function SignUp(props) {
         .then(res => console.log(res), push('/login'))
         .catch(err => console.log(err))
     }
-
+    console.log('x');
     return (
       <div>
         <h2>Create a New Account <br></br>Sign up!</h2>
         <form>
+      
           <input 
             placeholder='Username' 
             name='username'
@@ -43,7 +42,9 @@ function SignUp(props) {
             onChange={onChangeHandler} 
             type='password'
           />
+              
           <a onClick={onSubmit} href="#">Submit</a>
+
         </form>
       </div>
 

@@ -1,6 +1,6 @@
-// import logo from './logo.svg';
-import React, { useEffect, useState } from 'react';
+import './App.css';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute';
 
 import Login from '../src/components/Login';

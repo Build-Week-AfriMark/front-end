@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { allProductsArray } from '../fakeData/'
-
+import ProductForm from './ProductForm'
 import Item from './Item'
 
 const TheMarket = () => {
@@ -12,6 +12,10 @@ const TheMarket = () => {
 
     return (
         <div>
+            {/* <a href='/product'>Product</a> */}
+            
+              <ProductForm />
+          
             {products.map((item) => {
                 return (<Item item={item} />)
             })}
