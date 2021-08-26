@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory, useRouteMatch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './item.css'
 
 const Item = (props) => {
@@ -14,7 +14,7 @@ const Item = (props) => {
         <div className='item-card' id={item.userid} onClick={viewItemPage}>
             <div className='item-img'>
                 {
-                    item.url ? <img src={`${item.url}`} /> : <img src='https://cdn.imgbin.com/21/1/19/imgbin-question-mark-stock-photography-others-bsffm19vKpGzK9sDJxWMK8HJ5.jpg' />
+                    item.url ? <img src={`${item.url}`} alt={item.name} /> : <img src='https://cdn.imgbin.com/21/1/19/imgbin-question-mark-stock-photography-others-bsffm19vKpGzK9sDJxWMK8HJ5.jpg' alt={item.name} />
                 }
             </div>
             <h2>{item.name}</h2>

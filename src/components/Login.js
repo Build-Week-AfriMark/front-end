@@ -25,7 +25,8 @@ console.log(loginForm);
 return (
   <div>
     <img 
-      src={loginImage}></img>
+      src={loginImage}
+      alt='stock'></img>
     <h2>Login</h2>
     <form>
       <input 

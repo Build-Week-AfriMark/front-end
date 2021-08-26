@@ -12,13 +12,13 @@ const Product = () => {
                 //console.log(res)
                 setProduct(res.data)})
              .catch((err) => alert(err));
-    }, [])
+    }, [id])
     return(
         product ? 
         <div className='product-page'>
             <div className='product-img'>
                 {
-                    product.url ? <img src={`${product.url}`} /> : <img src='https://cdn.imgbin.com/21/1/19/imgbin-question-mark-stock-photography-others-bsffm19vKpGzK9sDJxWMK8HJ5.jpg' />
+                    product.url ? <img src={`${product.url}`} alt={product.name}/> : <img src='https://cdn.imgbin.com/21/1/19/imgbin-question-mark-stock-photography-others-bsffm19vKpGzK9sDJxWMK8HJ5.jpg' alt={product.name}/>
                 }
             </div>
             <h2>{product.name}</h2>
@@ -26,9 +26,9 @@ const Product = () => {
             <p>{product.description}</p>
             <p>${product.price}</p>
             <div className='product-nav'>
-                <Link>Back to Market</Link>
-                <Link>Edit Listing</Link>
-                <Link>Remove Listing</Link>
+                <Link to='/the-market'>Back to Market</Link>
+                <Link to='/the-market'>Edit Listing</Link>
+                <Link to='/the-market'>Remove Listing</Link>
             </div>
         </div>
          :
