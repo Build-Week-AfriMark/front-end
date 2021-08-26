@@ -1,39 +1,44 @@
 // import logo from './logo.svg';
-import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import PrivateRoute from './components/PrivateRoute';
 
 import Login from '../src/components/Login';
 import SignUp from './components/SignUp';
-
 import TheMarket from './components/TheMarket';
+import Logout from './components/Logout'
+import Header from './components/Header';
 
 
 function App() {
+  const [tokenState, setTokenState] = useState(false)
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if(token) {
+      setTokenState(true)
+    } else {
+      setTokenState(false)
+    }
+  },[])
+
   return (
     <div>
-      <header>
-        <nav>
-          <a href='/signup'>Sign Up</a>
-          <a href='/login'>Login</a>
-          <a href='the-market'>The Market</a>
-        </nav>
-      </header>
+      <Header tokenState={tokenState}/>
       <Router>
       <Switch>
         <Route path='/signup'>
           <SignUp/>
         </Route>
-        <Route path='/the-market'>
-          <TheMarket />
-        </Route>
+        <PrivateRoute path='/the-market' component={TheMarket} />
+        <PrivateRoute path='/logout' setTokenState ={setTokenState} component={Logout} />
         <Route path='/login'>
-          <Login />
+          <Login setTokenState={setTokenState}/>
         </Route>
         <Route path='/'>
-          <Login />
-        </Route>
-      </Switch>
+          <Login setTokenState={setTokenState}/>
+        </Route> 
+        </Switch>        
       </Router>
     </div>
   )
