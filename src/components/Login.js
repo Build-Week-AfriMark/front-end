@@ -9,7 +9,6 @@ function Login(props) {
     username: '',
     password: '',
   })
-
   const { push } = useHistory()
 
   const { setTokenState } = props
