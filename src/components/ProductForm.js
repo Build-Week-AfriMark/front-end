@@ -25,7 +25,9 @@ const ProductForm = (props) => {
        category: formValues.category,
        url: formValues.url
      }
-     console.log(newProduct);
+     axios.post('https://build-week-afrimark.herokuapp.com/api/items/add-item', newProduct)
+      .then((res) => console.log(res))
+      .catch((err) => alert(err))
    }
 
    const onChange = evt => {
