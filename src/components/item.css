@@ -1,0 +1,92 @@
+
+
+/* Market Component */
+.market-title {
+    text-align: center;
+    width: 100%;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+/* Item Component Below */
+
+.item-img img {
+    max-width: 75%;
+}
+
+.item-img  {
+    display: flex;
+    justify-content: center;
+}
+
+.item-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 25%;
+    margin: .5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: rgb(250, 249, 246);
+    transition: 0.3s;
+    padding: 1%;
+}
+
+.item-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    cursor:pointer;
+}
+
+.item-card h2, h4, p {
+    margin: 1% 0;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+}
+
+/* Product Page Below */
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.product-img {
+    width: 40%;
+    border: 1px solid black
+}
+
+.product-img img {
+    max-width: 100%;
+}
+
+.product-nav {
+    padding: 1%;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.product-nav a:hover{
+    text-decoration: black underline;
+    color: grey;
+}
+
+.fetching-data {
+    text-align: center;
+}

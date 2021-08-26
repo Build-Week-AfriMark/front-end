@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import { allProductsArray } from '../fakeData/'
-
+import axios from 'axios';
 import Item from './Item'
 
 const TheMarket = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        setProducts(allProductsArray)
-    },[])
+        axios.get('https://build-week-afrimark.herokuapp.com/api/items')
+            .then((res) => {
+                console.log(res);
+                setProducts(res.data)})
+            .catch((err) => console.log(err));
+    }, [])
 
     return (
-        <div>
+        <div className='products-list'>
+            <h2 className='market-title'>Welcome to the market!</h2>
             {products.map((item) => {
-                return (<Item item={item} />)
+                return (<Item key={item.id} item={item} />)
             })}
         </div>
     )
