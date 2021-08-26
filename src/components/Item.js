@@ -1,3 +1,4 @@
+import '../App.css';
 import React from 'react'
 import { useHistory } from 'react-router-dom';
 import './item.css'
