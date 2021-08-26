@@ -4,7 +4,7 @@ import { axiosWithAuth } from '../utils'
 
 
 
-const Logout = () => {
+const Logout = (props) => {
     console.log(axiosWithAuth)
     const{ push } = useHistory()
 
@@ -13,6 +13,7 @@ const Logout = () => {
             .post('/auth/logout')
             .then(res => {
                 localStorage.removeItem('token')
+                props.setTokenState(false)
                 push('/login')
             })
             .catch(err => console.log(err))
