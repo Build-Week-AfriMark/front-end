@@ -7,12 +7,12 @@ import Login from '../src/components/Login';
 import SignUp from './components/SignUp';
 
 import TheMarket from './components/TheMarket';
-import Product from './components/Product'
+import ProductForm from './components/Product'
 
 function App() {
 
   return (
-   
+    <div className= "productReturn">
       <header>
         <nav>
           <a href='/signup'>Sign Up</a>
@@ -20,24 +20,24 @@ function App() {
           <a href='the-market'>The Market</a>
         </nav>
       </header>
-      <Router>
-        <Switch>
-          <Route path='/signup'>
-            <SignUp/>
-          </Route>
-          <Route path='/the-market'>
-            <TheMarket />
-          </Route>
-          <Route path='/login'>
-            <Login />
-          </Route>
-          <Route path='/'>
-            <Product />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  )
+        <Router>
+          <Switch>
+            <Route path='/signup'>
+              <SignUp/>
+            </Route>
+            <Route path='/the-market'>
+              <TheMarket />
+            </Route>
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <Route path='/'>
+              <ProductForm />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+        )
   }
 
 export default App;

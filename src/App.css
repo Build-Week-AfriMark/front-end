@@ -1,57 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: rgba(247, 209, 18, 0.921);
-  font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
-
-a:hover {
-  background: rgba(247, 209, 18, 0.921);
-  color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(247, 209, 18, 0.921),
-              0 0 25px rgba(247, 209, 18, 0.921),
-              0 0 50px rgba(247, 209, 18, 0.921),
-              0 0 100px rgba(247, 209, 18, 0.921)
-}
-
-a span {
-  position: absolute;
-  display: block;
-}
-
 
 
 @keyframes btn-anim1 {
@@ -84,11 +30,39 @@ a span {
   }
 }
 
+a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgba(247, 209, 18, 0.921);
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+a:hover {
+  background: rgba(247, 209, 18, 0.921);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(247, 209, 18, 0.921),
+              0 0 25px rgba(247, 209, 18, 0.921),
+              0 0 50px rgba(247, 209, 18, 0.921),
+              0 0 100px rgba(247, 209, 18, 0.921)
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
 input {
   width: 100%;
-  padding: 1em 0;
   font-size: 16px;
-  color: #fff;
+  color: white;
   margin-bottom: 3px;
   border: none;
   border-bottom: 1px solid #fff;
@@ -100,6 +74,11 @@ h2 {
   font-family: 'Rampart One';
 }
 
+label {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
 
 .container {
   border: 1px solid rgb(210, 210, 210);
@@ -115,7 +94,7 @@ h2 {
 }
 
 .createAccount, .productReturn{
-  background-color: #070706;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -136,6 +115,7 @@ h2 {
   }
 .inputs {
     flex: 2;
+    border: 1px solid black;
   }
 /* .checkboxes {
     flex: 1;
@@ -146,8 +126,3 @@ h2 {
     justify-content: space-between;
     align-items: center;
   } */
-  label {
-    display: flex;
-    margin-bottom: 16px;
-    justify-content: space-between;
-  }

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -11,44 +10,36 @@ const initialFormValues = {
   url: ''
 }
 
-export default function ProductForm(props) {
+const ProductForm = (props) => {
 
   const [formValues, setFormValues] = useState(initialFormValues)
   
-  const onSubmit = evt => {
-    evt.preventDefault();
+   const onSubmit = evt => {
+     evt.preventDefault();
 
-    const newProduct = {
-      name: formValues.name,
-      price: formValues.price,
-      location: formValues.location,
-      description: formValues.description,
-      category: formValues.category,
-      url: formValues.url
-    }
+     const newProduct = {
+       name: formValues.name,
+       price: formValues.price,
+       location: formValues.location,
+       description: formValues.description,
+       category: formValues.category,
+       url: formValues.url
+     }
+     console.log(newProduct);
+   }
 
+   const onChange = evt => {
+     const { name, value } = evt.target
+     console.log(evt)
+     console.log(evt.target)
+     //const valueToUse = type === 'checkbox' ? checked : value;
 
-    // validate(name, value)
-    // setFormValues({
-    //   ...formValues,
-    //   [name]: value
-    // })
-  }
-
-  const onChange = evt => {
-    const { name, value, checked, type } = evt.target
-    console.log(evt)
-    console.log(evt.target)
-    //const valueToUse = type === 'checkbox' ? checked : value;
-
-    setFormValues({...formValues, [name]: value})
-  }
+     setFormValues({...formValues, [name]: value})
+     console.log(formValues);
+   }
 
   return (
     <form className='form container' onSubmit={onSubmit}>
-      <div className='form-group submit'>
-        {/* <h2>Add a Product</h2> */}
-      </div>
 
       
       <h1>Add a New Product</h1>
@@ -103,7 +94,8 @@ export default function ProductForm(props) {
           </label>
         </div>
       </form>
+  )
 }
 
-
+export default ProductForm;
 
