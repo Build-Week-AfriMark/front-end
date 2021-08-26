@@ -47,7 +47,7 @@ const ProductForm = (props) => {
 
         <div className='form-group inputs'>
           <h4>General Information</h4>
-          <label>Name
+          <label>Product Name
             <input className="productInput"
               value={formValues.name}
               onChange={onChange}
@@ -56,7 +56,7 @@ const ProductForm = (props) => {
             />
           </label>
 
-          <label>Price
+          <label> Your Price
             <input className="productInput"
               value={formValues.price}
               onChange={onChange}
@@ -64,7 +64,14 @@ const ProductForm = (props) => {
               type='text'
             />
           </label>
-
+          <label>Product Description
+            <input className="productInput"
+              value={formValues.description}
+              onChange={onChange}
+              name='description'
+              type='text'
+            />
+          </label>
           <label>Location
             <select
               onChange={onChange}
@@ -72,24 +79,25 @@ const ProductForm = (props) => {
               name='location'
             >
               <option value=''>- Where AreYou? -</option>
-              <option value='L1'>Lagos</option>
-              <option value='L2'>Joburg</option>
-              <option value='L3'>Kinsasha</option>
-              <option value='L4'>Kampala</option>
+              <option value='lagos'>Lagos</option>
+              <option value='joburg'>Joburg</option>
+              <option value='kinsasha'>Kinsasha</option>
+              <option value='kampala'>Kampala</option>
             </select>
           </label>
 
-          <label>Description
+          <label>Category
             <select
               onChange={onChange}
-              value={formValues.description}
-              name='description'
+              value={formValues.category}
+              name='category'
             >
-              <option value=''>- What Is It? -</option>
-              <option value='L1'>This</option>
-              <option value='L2'>That</option>
-              <option value='L3'>The Other</option>
-              <option value='L4'>Another</option>
+              <option value=''>Pick One</option>
+              <option value='pantry'>Pantry</option>
+              <option value='peas'>Peas</option>
+              <option value='fashion'>Fashion</option>
+              <option value='technology'>Technology</option>
+              <option value='wellness'>Wellness</option>
             </select>
           </label>
         </div>
