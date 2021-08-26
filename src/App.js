@@ -7,7 +7,7 @@ import Login from '../src/components/Login';
 import SignUp from './components/SignUp';
 
 import TheMarket from './components/TheMarket';
-import ProductForm from './components/Product'
+
 
 function App() {
 
@@ -31,9 +31,7 @@ function App() {
             <Route path='/login'>
               <Login />
             </Route>
-            <Route path='/'>
-              <ProductForm />
-            </Route>
+
           </Switch>
         </Router>
       </div>
