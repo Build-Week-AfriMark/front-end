@@ -6,6 +6,7 @@ function SignUp(props) {
         username: '',
         password: ''
     })
+    console.log('x');
     console.log(props)
 
 
@@ -16,7 +17,7 @@ function SignUp(props) {
     function onSubmit(e) {
       e.preventDefault()
     }
-
+    console.log('x');
     return (
       <div>
         <h2>Create a New Account <br></br>Sign up!</h2>

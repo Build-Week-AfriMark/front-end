@@ -21,7 +21,7 @@ function onSubmit(e) {
   e.preventDefault()
   push('/theMarket')
 }
-console.log(loginForm);
+console.log('x');
 return (
   <div>
     <img 
