@@ -12,10 +12,6 @@ const TheMarket = () => {
 
     return (
         <div>
-            {/* <a href='/product'>Product</a> */}
-            
-              <ProductForm />
-          
             {products.map((item) => {
                 return (<Item item={item} />)
             })}

@@ -23,22 +23,22 @@ function App() {
   },[])
 
   return (
-    <div>
+    <div className='productReturn'>
       <Header tokenState={tokenState}/>
       <Router>
-      <Switch>
-        <Route path='/signup'>
-          <SignUp/>
-        </Route>
-        <PrivateRoute path='/the-market' component={TheMarket} />
-        <PrivateRoute path='/logout' setTokenState ={setTokenState} component={Logout} />
-        <Route path='/login'>
-          <Login setTokenState={setTokenState}/>
-        </Route>
-        <Route path='/'>
-          <Login setTokenState={setTokenState}/>
-        </Route> 
-        </Switch>        
+        <Switch>
+          <Route path='/signup'>
+            <SignUp/>
+          </Route>
+          <PrivateRoute path='/the-market' component={TheMarket} />
+          <PrivateRoute path='/logout' setTokenState ={setTokenState} component={Logout} />
+          <Route path='/login'>
+            <Login setTokenState={setTokenState}/>
+          </Route>
+          <Route path='/'>
+            <Login setTokenState={setTokenState}/>
+          </Route> 
+          </Switch>        
       </Router>
     </div>
   )
