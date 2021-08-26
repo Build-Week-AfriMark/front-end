@@ -92,7 +92,7 @@ const ProductForm = (props) => {
               value={formValues.category}
               name='category'
             >
-              <option value=''>Pick One</option>
+              <option value=''>-Pick One-</option>
               <option value='pantry'>Pantry</option>
               <option value='peas'>Peas</option>
               <option value='fashion'>Fashion</option>
