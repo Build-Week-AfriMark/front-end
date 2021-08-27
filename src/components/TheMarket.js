@@ -17,6 +17,7 @@ const TheMarket = () => {
     return (
         <div className='products-list'>
             <h2 className='market-title'>Welcome to the market!</h2>
+            <ProductForm />
             {products.map((item) => {
                 return (<Item key={item.id} item={item} />)
             })}

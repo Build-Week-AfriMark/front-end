@@ -9,14 +9,9 @@ const Logout = (props) => {
     const{ push } = useHistory()
 
     useEffect(() => {
-        axiosWithAuth()
-            .post('/auth/logout')
-            .then(res => {
-                localStorage.removeItem('token')
-                props.setTokenState(false)
-                push('/login')
-            })
-            .catch(err => console.log(err))
+        localStorage.removeItem('token')
+        props.setTokenState(false)
+        push('/login')
     }, [])
 
     return (<></>)

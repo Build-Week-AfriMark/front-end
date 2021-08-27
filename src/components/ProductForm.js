@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const initialFormValues = {
@@ -13,6 +13,14 @@ const initialFormValues = {
 const ProductForm = (props) => {
 
   const [formValues, setFormValues] = useState(initialFormValues)
+
+  useEffect(() => {
+    axios.get('https://build-week-afrimark.herokuapp.com/api/users')
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+  },[])
   
    const onSubmit = evt => {
      evt.preventDefault();
@@ -102,6 +110,7 @@ const ProductForm = (props) => {
               <option value='wellness'>Wellness</option>
             </select>
           </label>
+          <button>Add Product</button>
         </div>
       </form>
   )
